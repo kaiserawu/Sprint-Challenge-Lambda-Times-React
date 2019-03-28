@@ -29,9 +29,20 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 ## Self-Study/Essay Questions
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
+
+PropTypes are used to check the prop data being passed to components for its type. It's important to check so that you don't get any errors in your code because of weird typing or incorrect data. I assume it'd also help if people are trying to do some kinda shady hacking shenanigans and SQL injecting in your input or something.
+
 - [ ] Describe a life-cycle event in React?
+
+It starts with render running and creating a component, then when the component is created, it runs ComponentDidMount if it has one, which does other stuff as needed once the component exists, then, for as long as the component is needed, it sits around and uses setState to update its data and call render as needed. Finally, the component is removed from the screen, possibly calling ComponentWillUnmount beforehand.
+
 - [ ] Explain the details of a Higher Order Component?
+
+An HOC is a function that takes a component and returns a new component. Its used to keep code DRY by letting us reuse component logic. For example, it can take some kind of shared functionality that a number of components need, and apply it to them. Or it can act as a holder for other components to use them based on other higher up logic.
+
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
+
+You can use normal CSS, or a preprocessor, or using a library like Styled-Components. Normal CSS is fairly ubiquitous and is common knowledge among front-end developers, so it's always a viable option for styling. Preprocessors add some fancy functionality and syntactical ease to let people write more succinct or easily understood code with stuff like nesting, as well as getting more useful functionality like mixins, etc. Libraries like Bootstrap/Reactstrap allow for faster styling using pre-designed systems of styled components, and Styled-Components allows for writing CSS in JS files, making giving each component a specific style, helping with CSS specificity and ease of file structure.
 
 ## Project Setup
 
